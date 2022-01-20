@@ -1,0 +1,13 @@
+Wiadomości<br>
+<div style="background-color: aquamarine" *ngFor="let message of messages">
+  {{message.content}} - Użytkownik: {{message.userId}}
+</div>
+<form>
+
+</form>
+<form class="pt-3" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <input id="message" formControlName="message"
+         name="message" type="text">
+  <button>Wyślij</button>
+</form>
+<button (click)="logout()">Wyloguj</button>
